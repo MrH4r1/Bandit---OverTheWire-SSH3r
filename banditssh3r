@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#shell progarm to login shh 
+echo -e "\e[31m***********************************\e[0m"
+echo -e  "\e[31mBandit - OverTheWire SSH3R \e[0m "
+echo -e "\e[31m***********************************\e[0m"
+#read level 
+
+read -p "Enter The Bandit Level > "  level
+
+
+if [[ ! -z "$level"  ]]
+
+then
+	echo -e  "\e[31mLogin To Bandit $level \e[0m "
+ssh bandit"${level}"@bandit.labs.overthewire.org -p 2220
+
+else
+	echo "Invalid Input"
+
+
+fi
+
